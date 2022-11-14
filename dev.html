@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .secret a {
+    float: left;
+    font-size: 16px;
+    color: rgb(44, 42, 42);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+  </style>
+  </head>
+  <body>
+  
+    <div class="navbar">
+      <a href="http://xavierhale.github.io/index.html">Home</a>
+      <a href="" onclick="myFunction()">News</a>
+      <div class="dropdown">
+        <button class="dropbtn">Downloads 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="http://xavierhale.github.io/dlpage.html">Games</a>
+          <a href="http://xavierhale.github.io/ems.html">Emulators</a>
+          <a href="" onclick="myFunction()">ROM files (coming soon)</a>
+          <a href="http://xavierhale.github.io/tools.html">Tools & Trolls</a>
+        </div>
+      </div> 
+      <a href="https://xavierhale.github.io/contact.html">Contact</a>
+    </div>
+    
+  </div>
+<div style="padding-left:16px">
+  
+  
+  <h1>Yo! Welcome to the dev page. </h1>
+  <p>Things here might not be the most interesting, but this is where I'll put all my </p>
+  <p>development projects/tools.</p>
+  <a href="https://github.com/XavierHale/Crimzen-Client">Crimzen</a>
+  <p>Idk if ill ever end up updating this but we'll figure it out.</p>
+  <p>Its a micro-os written in Windows batch. It needs GIT for certain web interaction features to work.</p>
+<script>
+  function myFunction() {
+    alert("Oh No! It looks like this isn't implemented");
+  }
+  </script>
+
+<script>
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+      var div = this.parentElement;
+      div.style.opacity = "0";
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+  }
+  </script>
+
+</body>
+</html>
